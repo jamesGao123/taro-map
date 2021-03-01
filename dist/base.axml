@@ -1,0 +1,102 @@
+<import-sjs name="xs" from="./utils.sjs" />
+<template name="taro_tmpl">
+  <block a:for="{{root.cn}}" a:key="uid">
+    <template is="tmpl_0_container" data="{{i:item}}" />
+  </block>
+</template>
+
+<template name="tmpl_0_catch-view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" onTouchStart="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh" catchTouchMove="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_static-view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_pure-view">
+  <view style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onTransitionEnd="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </view>
+</template>
+
+<template name="tmpl_0_static-text">
+  <text selectable="{{xs.b(i.selectable,false)}}" space="{{i.space}}" decode="{{xs.b(i.decode,false)}}" style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </text>
+</template>
+
+<template name="tmpl_0_text">
+  <text selectable="{{xs.b(i.selectable,false)}}" space="{{i.space}}" decode="{{xs.b(i.decode,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </text>
+</template>
+
+<template name="tmpl_0_cover-view">
+  <cover-view scroll-top="{{xs.b(i.scrollTop,false)}}" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </cover-view>
+</template>
+
+<template name="tmpl_0_scroll-view">
+  <scroll-view scroll-x="{{xs.b(i.scrollX,false)}}" scroll-y="{{xs.b(i.scrollY,false)}}" upper-threshold="{{xs.b(i.upperThreshold,50)}}" lower-threshold="{{xs.b(i.lowerThreshold,50)}}" scroll-top="{{i.scrollTop}}" scroll-left="{{i.scrollLeft}}" scroll-into-view="{{i.scrollIntoView}}" scroll-with-animation="{{xs.b(i.scrollWithAnimation,false)}}" enable-back-to-top="{{xs.b(i.enableBackToTop,false)}}" enable-flex="{{xs.b(i.enableFlex,false)}}" scroll-anchoring="{{xs.b(i.scrollAnchoring,false)}}" refresher-enabled="{{xs.b(i.refresherEnabled,false)}}" refresher-threshold="{{xs.b(i.refresherThreshold,45)}}" refresher-default-style="{{xs.b(i.refresherDefaultStyle,'black')}}" refresher-background="{{xs.b(i.refresherBackground,'#FFF')}}" refresher-triggered="{{xs.b(i.refresherTriggered,false)}}" enhanced="{{xs.b(i.enhanced,false)}}" bounces="{{xs.b(i.bounces,true)}}" show-scrollbar="{{xs.b(i.showScrollbar,true)}}" paging-enabled="{{xs.b(i.pagingEnabled,false)}}" fast-deceleration="{{xs.b(i.fastDeceleration,false)}}" onRefresherPulling="eh" onRefresherRefresh="eh" onRefresherRestore="eh" onRefresherAbort="eh" onScrollToUpper="eh" onScrollToLower="eh" onScroll="eh" animation="{{i.animation}}" onTransitionEnd="eh" onAnimationStart="eh" onAnimationIteration="eh" onAnimationEnd="eh" onDragStart="eh" onDragging="eh" onDragEnd="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" scroll-animation-duration="{{i.scrollAnimationDuration}}" trap-scroll="{{xs.b(i.trapScroll,false)}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </scroll-view>
+</template>
+
+<template name="tmpl_0_static-image">
+  <image src="{{i.src}}" mode="{{xs.b(i.mode,'scaleToFill')}}" webp="{{xs.b(i.webp,false)}}" lazy-load="{{xs.b(i.lazyLoad,false)}}" show-menu-by-longpress="{{xs.b(i.showMenuByLongpress,false)}}" style="{{i.st}}" class="{{i.cl}}"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </image>
+</template>
+
+<template name="tmpl_0_image">
+  <image src="{{i.src}}" mode="{{xs.b(i.mode,'scaleToFill')}}" webp="{{xs.b(i.webp,false)}}" lazy-load="{{xs.b(i.lazyLoad,false)}}" show-menu-by-longpress="{{xs.b(i.showMenuByLongpress,false)}}" onError="eh" onLoad="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </image>
+</template>
+
+<template name="tmpl_0_map">
+  <map longitude="{{i.longitude}}" latitude="{{i.latitude}}" scale="{{xs.b(i.scale,16)}}" markers="{{xs.b(i.markers,[])}}" covers="{{i.covers}}" polyline="{{xs.b(i.polyline,[])}}" circles="{{xs.b(i.circles,[])}}" controls="{{i.controls}}" include-points="{{xs.b(i.includePoints,[])}}" show-location="{{i.showLocation}}" polygon="{{i.polygons}}" subkey="{{i.subkey}}" layer-style="{{xs.b(i.layerStyle,1)}}" rotate="{{xs.b(i.rotate,0)}}" skew="{{xs.b(i.skew,skew)}}" enable-3D="{{xs.b(i.enable3D,false)}}" show-compass="{{xs.b(i.showCompass,false)}}" show-scale="{{xs.b(i.showScale,false)}}" enable-overlooking="{{xs.b(i.enableOverlooking,false)}}" enable-zoom="{{xs.b(i.enableZoom,true)}}" enable-scroll="{{xs.b(i.enableScroll,true)}}" enable-rotate="{{xs.b(i.enableRotate,false)}}" enable-satellite="{{xs.b(i.enableSatellite,false)}}" enable-traffic="{{xs.b(i.enableTraffic,false)}}" onMarkerTap="eh" onLabelTap="eh" onControlTap="eh" onCalloutTap="eh" onUpdated="eh" onRegionChange="eh" onPoiTap="eh" onTouchStart="eh" onTouchMove="eh" onTouchEnd="eh" onTouchCancel="eh" onLongTap="eh" setting="{{xs.b(i.setting,{})}}" style="{{i.st}}" class="{{i.cl}}" onTap="eh"  id="{{i.uid}}">
+    <block a:for="{{i.cn}}" a:key="uid">
+      <template is="{{xs.e(0)}}" data="{{i:item}}" />
+    </block>
+  </map>
+</template>
+
+<template name="tmpl_0_#text" data="{{i:i}}">
+  <block>{{i.v}}</block>
+</template>
+
+<template name="tmpl_0_container">
+  <template is="{{xs.a(0, i.nn)}}" data="{{i:i}}" />
+</template>
